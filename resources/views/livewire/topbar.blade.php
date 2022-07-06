@@ -1,6 +1,6 @@
       <ul class="navbar-nav navbar-nav-right">
         @if (Auth::user()->hasTeamRole(auth()->user()->currentTeam, 'admin'))
-        <li class="nav-item dropdown d-none d-lg-block">
+        <li class="nav-item dropdown d-none d-sm-block">
           <a class="nav-link btn btn-success create-new-button"  aria-expanded="false" href="{{route ('adduser')}}">+ Add User</a>  
         </li>
         @endif
@@ -94,7 +94,7 @@
           <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
             <div class="navbar-profile">
               <img class="rounded-circle" width="32" height="32" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-              <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</p>
+              <p class="mb-0 d-none d-lg-block navbar-profile-name">{{ Auth::user()->name }}</p>
               <i class="mdi mdi-menu-down d-none d-sm-block"></i>
             </div>
           </a>
