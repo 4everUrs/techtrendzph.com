@@ -22,6 +22,7 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../assets/images/favicon.png" />
     @livewireStyles
+    {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
   </head>
   <body>
     <div class="container-scroller">
@@ -84,6 +85,9 @@
     {{-- <script src="../assets/vendors/js/vendor.bundle.base.js"></script> --}}
     <!-- endinject -->
     <!-- Plugin js for this page -->
+    @stack('modals')
+    
+    @livewireScripts
     <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -105,9 +109,7 @@
     <!-- Custom js for this page -->
     <script src="../assets/js/dashboard.js"></script>
     <!-- End custom js for this page -->
-    @stack('modals')
-
-        @livewireScripts
+    
 
         @stack('scripts')
         <script src="{{ mix('js/app.js') }}" defer></script>
