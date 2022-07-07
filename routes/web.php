@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutesController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AddUserController;
+use Laravel\Jetstream\Http\Controllers\Livewire\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,23 +17,21 @@ use App\Http\Controllers\RoutesController;
 |
 */
 
+Route::get('redirects', 'App\Http\Controllers\LoginController@index')->name('home');
+
+
 Route::get('/', function () {
     return redirect ('/login');
 });
 
-Route::group(['middleware'=>['auth']],function(){
-
-    Route::get('/admin/adduser', [RoutesController::class, 'index'])->name('adduser');
-    Route::post('/admin/adduser', [RoutesController::class, 'addUser'])->name('adduser');
-    
-});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/admin', function () {
-        return view('dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
+    // Route::get('/admin', function () {return view('dashboard');})->name('dashboard');
+    Route::get('/admin/adduser', [AddUserController::class, 'index'])->name('adduser');
+    Route::post('/admin/adduser', [AddUserController::class, 'addUser'])->name('adduser');
+    Route::get('/user/profile', [UserProfileController::class, 'show'])->name('profile.show');
+    Route::get('/admin/dashboard', function () {return view ('dashboard');})->name('dashboard');
+    Route::get('/user/logistics', function () {return view ('dashboard');})->name('logistics');
+    Route::get('/user/finance', function () {return view ('dashboard');})->name('finance');
+    Route::get('/user/core', function () {return view ('dashboard');})->name('core');
+    Route::get('/user/hr', function () {return view ('dashboard');})->name('hr');
 });

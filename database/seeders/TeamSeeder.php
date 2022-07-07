@@ -18,27 +18,27 @@ class TeamSeeder extends Seeder
         DB::table('teams')->insert([
             [
                  'user_id' => '1',
-                 'name' => 'Admin Team',
+                 'name' => 'admin',
                  'personal_team' => '1',
             ],
             [
                  'user_id' => '1',
-                 'name' => 'Logistics',
+                 'name' => 'logistics',
                  'personal_team' => '1',
             ],
             [
                  'user_id' => '1',
-                 'name' => 'Finance',
+                 'name' => 'finance',
                  'personal_team' => '1',
             ],
             [
                  'user_id' => '1',
-                 'name' => 'Core',
+                 'name' => 'core',
                  'personal_team' => '1',
             ],
             [
                  'user_id' => '1',
-                 'name' => 'Human Resource',
+                 'name' => 'hr',
                  'personal_team' => '1',
             ]
             ]);
