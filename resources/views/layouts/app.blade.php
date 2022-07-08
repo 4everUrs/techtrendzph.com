@@ -88,10 +88,10 @@
     @stack('modals')
     
     @livewireScripts
-    <script
+    {{-- <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> --}}
     <script src="../assets/vendors/chart.js/Chart.min.js"></script>
     <script src="../assets/vendors/progressbar.js/progressbar.min.js"></script>
     <script src="../assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>

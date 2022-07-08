@@ -5,5 +5,6 @@
         </h2>
     </x-slot>
 
-    <x-jet-welcome />
+    {{-- <x-jet-welcome /> --}}
+    @include('logistics.procurement.request-list')
 </x-app-layout>
