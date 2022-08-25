@@ -34,4 +34,8 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('/user/finance', function () {return view ('dashboard');})->name('finance');
     Route::get('/user/core', function () {return view ('dashboard');})->name('core');
     Route::get('/user/hr', function () {return view ('dashboard');})->name('hr');
+
+    Route::get('/user/logistics/request_lists', function () {
+        return view ('logistics.procurement.request-list');
+    })->name('requests');
 });

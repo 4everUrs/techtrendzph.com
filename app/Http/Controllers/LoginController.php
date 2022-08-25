@@ -26,8 +26,5 @@ class LoginController extends Controller
         elseif(Auth::user()->current_team_id == '5'){
             return redirect()->route('hr');
         }
-
-
-
    }
 }

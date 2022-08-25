@@ -1,6 +1,6 @@
       <ul class="navbar-nav navbar-nav-right">
         @if (Auth::user()->hasTeamRole(auth()->user()->currentTeam, 'admin'))
-        <li class="nav-item dropdown d-none d-sm-block">
+        <li class="nav-item dropdown">
           <a class="nav-link btn btn-success create-new-button"  aria-expanded="false" href="{{route ('adduser')}}">+ Add User</a>  
         </li>
         @endif

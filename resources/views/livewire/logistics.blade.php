@@ -47,4 +47,19 @@
             </ul>
         </div>
     </li>
+    <div class="dropdown-divider"></div>
+    <li class="nav-item menu-items">
+        <a class="nav-link" data-bs-toggle="collapse" href="#procurement" aria-expanded="false" aria-controls="procurement">
+            <span class="menu-icon">
+                <i class="mdi mdi-package-variant"></i>
+            </span>
+            <span class="menu-title">Procurement</span>
+            <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="procurement">
+            <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{route ('requests')}}">Request Lists</a></li>
+            </ul>
+        </div>
+    </li>
 </ul>
